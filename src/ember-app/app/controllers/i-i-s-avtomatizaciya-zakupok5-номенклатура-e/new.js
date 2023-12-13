@@ -1,0 +1,4 @@
+import IISAvtomatizaciya_zakupok5НоменклатураEController from '../i-i-s-avtomatizaciya-zakupok5-номенклатура-e';
+
+var IISAvtomatizaciya_zakupok5НоменклатураENewController = IISAvtomatizaciya_zakupok5НоменклатураEController;
+export default IISAvtomatizaciya_zakupok5НоменклатураENewController;

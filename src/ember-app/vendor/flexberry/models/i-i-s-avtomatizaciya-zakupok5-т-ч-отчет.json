@@ -1,0 +1,76 @@
+﻿{
+  "name": "IISAvtomatizaciya_zakupok5ТЧОтчет",
+  "modelName": "i-i-s-avtomatizaciya-zakupok5-т-ч-отчет",
+  "className": "ТЧОтчет",
+  "nameSpace": "IIS.Avtomatizaciya_zakupok5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаНДС",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "этоУслуга",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "номенклатура",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-номенклатура",
+      "inverse": null
+    },
+    {
+      "polymorphic": true,
+      "presence": true,
+      "name": "отчеЗакупках",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-отче-закупках",
+      "inverse": "тЧОтчет"
+    }
+  ],
+  "hasMany": [],
+  "projections": [],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

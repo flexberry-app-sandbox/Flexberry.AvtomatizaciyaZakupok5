@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-avtomatizaciya-zakupok5-контрагенты-e",
+  "editForm": "i-i-s-avtomatizaciya-zakupok5-контрагенты-e",
+  "external": false,
+  "caption": "Контрагенты",
+  "name": "IISAvtomatizaciya_zakupok5КонтрагентыL",
+  "className": "КонтрагентыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avtomatizaciya-zakupok5-контрагенты",
+      "modelProjection": "КонтрагентыL"
+    }
+  ]
+}

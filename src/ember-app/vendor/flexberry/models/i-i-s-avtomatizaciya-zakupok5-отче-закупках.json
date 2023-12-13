@@ -1,0 +1,341 @@
+﻿{
+  "name": "IISAvtomatizaciya_zakupok5ОтчеЗакупках",
+  "modelName": "i-i-s-avtomatizaciya-zakupok5-отче-закупках",
+  "className": "ОтчеЗакупках",
+  "nameSpace": "IIS.Avtomatizaciya_zakupok5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОкончания",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состОтгрузки",
+      "type": "i-i-s-avtomatizaciya-zakupok5-сост-поставок",
+      "flexberryType": "СостПоставок",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состояниеОплаты",
+      "type": "i-i-s-avtomatizaciya-zakupok5-сост-оплаты",
+      "flexberryType": "СостОплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаВклНДС",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаДокумента",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "контрагенты",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-контрагенты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организации",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-организации",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склады",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-склады",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧЗаказ",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-т-ч-заказ",
+      "inverse": "отчеЗакупках"
+    },
+    {
+      "name": "тЧОтчет",
+      "relatedTo": "i-i-s-avtomatizaciya-zakupok5-т-ч-отчет",
+      "inverse": "отчеЗакупках"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ОтчетОЗакупкахE",
+      "modelName": "i-i-s-avtomatizaciya-zakupok5-отче-закупках",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "состояниеОплаты",
+          "caption": "Состояние оплаты",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "состОтгрузки",
+          "caption": "Сост отгрузки",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "суммаВклНДС",
+          "caption": "Сумма вкл НДС",
+          "hidden": false,
+          "index": 11
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 12
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организации",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "организация",
+              "caption": "Организация",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "default",
+          "caption": "Организации",
+          "name": "организации",
+          "relatedTo": "i-i-s-avtomatizaciya-zakupok5-организации",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Склады",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "склад",
+              "caption": "Склад",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": 5,
+          "type": "default",
+          "caption": "Склады",
+          "name": "склады",
+          "relatedTo": "i-i-s-avtomatizaciya-zakupok5-склады",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Контрагенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "контрагент",
+              "caption": "Контрагент",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "default",
+          "caption": "Контрагенты",
+          "name": "контрагенты",
+          "relatedTo": "i-i-s-avtomatizaciya-zakupok5-контрагенты",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ОтчетОЗакупкахL",
+      "modelName": "i-i-s-avtomatizaciya-zakupok5-отче-закупках",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "суммаВклНДС",
+          "caption": "Сумма вкл НДС",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "состояниеОплаты",
+          "caption": "Состояние оплаты",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "состОтгрузки",
+          "caption": "Сост отгрузки",
+          "hidden": false,
+          "index": 9
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организации",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "организация",
+              "caption": "Организация",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Организация",
+          "name": "организации",
+          "relatedTo": "i-i-s-avtomatizaciya-zakupok5-организации",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Склады",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "склад",
+              "caption": "Склад",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Склад",
+          "name": "склады",
+          "relatedTo": "i-i-s-avtomatizaciya-zakupok5-склады",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Контрагенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "контрагент",
+              "caption": "Контрагент",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Контрагент",
+          "name": "контрагенты",
+          "relatedTo": "i-i-s-avtomatizaciya-zakupok5-контрагенты",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

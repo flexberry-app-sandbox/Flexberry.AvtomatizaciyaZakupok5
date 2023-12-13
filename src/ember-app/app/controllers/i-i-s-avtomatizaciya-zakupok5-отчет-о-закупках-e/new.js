@@ -1,0 +1,4 @@
+import IISAvtomatizaciya_zakupok5ОтчетОЗакупкахEController from '../i-i-s-avtomatizaciya-zakupok5-отчет-о-закупках-e';
+
+var IISAvtomatizaciya_zakupok5ОтчетОЗакупкахENewController = IISAvtomatizaciya_zakupok5ОтчетОЗакупкахEController;
+export default IISAvtomatizaciya_zakupok5ОтчетОЗакупкахENewController;
